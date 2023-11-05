@@ -12,7 +12,7 @@ const Blog = () => {
 
   return (
     <div className="container mx-auto p-8">
-      <h1 className="text-4xl font-extrabold text-primary my-6">
+      <h1 className="text-4xl font-extrabold text-cyan-200 my-6">
         Welcome to Our <span className="text-fancyblue"> Blog</span>
       </h1>
       <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
