@@ -2,7 +2,7 @@ import React from 'react';
 import LandingPage from '../components/LandingPage';
 import Service from '../components/Service';
 import CardOperation from '../components/CardOperation';
-import PortfolioPage from '../components/PortfolioPage';
+
 import { Link } from 'react-router-dom';
 import '../components/Home.css';
 
@@ -42,7 +42,7 @@ function Home() {
         </div>
       </section>
       
-      <PortfolioPage />
+      
     </div>
   );
 }

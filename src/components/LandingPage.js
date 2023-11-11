@@ -6,40 +6,33 @@ import { Link } from 'react-router-dom';
 const LandingPage = () => {
   return (
     <div
-    style={{
-      backgroundImage: `url(${pic})`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'right', // Adjusted background position
-      minHeight: '100vh',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      textAlign: 'center',
-      color: 'white',
-      marginTop: '50px', // Adjusted top margin
-    }}
+      style={{
+        backgroundImage: `url(${pic})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        minHeight: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        textAlign: 'center',
+        color: 'white',
+        padding: '20px',
+      }}
     >
-      <div style={{ backgroundColor: 'rgba(0, 0, 0, 0.7)', padding: '20px', borderRadius: '10px' }}>
-        <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold mb-4 text-cyan-300 title">
+      <div style={{ backgroundColor: 'rgba(0, 0, 0, 0.7)', padding: '20px', borderRadius: '10px', maxWidth: '600px' }}>
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-4 text-cyan-300 title">
           Welcome to FinVerse
         </h1>
-        <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 text-yellow-300 subtitle">
+        <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold mb-4 text-yellow-300 subtitle">
           Your Trusted Financial Partner
         </h2>
-        <p className="paragraph"
-          style={{
-            fontSize: '1.4rem',
-            lineHeight: '1.6',
-            maxWidth: '600px',
-            margin: '0 auto',
-          }}
-        >
+        <p className="paragraph text-sm sm:text-base md:text-lg lg:text-xl">
           Elevate your financial journey with our expert solutions and unwavering commitment. We provide a wide range of financial services tailored to your specific needs, ensuring your financial success.
         </p>
-       
-        <Link to="/Hire" className="ctao-button">
-          Hire us
+
+        <Link to="/Hire" className="ctaok-button mt-4 bg-rose-500 hover:bg-rose-700 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full font-semibold text-md sm:text-lg transition duration-300 ease-in-out transform hover:scale-105">
+          Get Started
         </Link>
       </div>
     </div>
@@ -47,3 +40,5 @@ const LandingPage = () => {
 };
 
 export default LandingPage;
+
+

@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
-import '../components/Navbar.css'
+import '../components/Navbar.css';
+
 function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -12,7 +13,7 @@ function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const navbar = document.querySelector('.navbar'); // Replace 'navbar' with your navbar class or ID
+      const navbar = document.querySelector('.navbar');
       if (navbar) {
         if (window.scrollY > 0) {
           navbar.classList.add('fixed-navbar');
@@ -67,7 +68,7 @@ function Navbar() {
           </button>
         </div>
       </div>
-      <div className={`md:hidden absolute top-19 right-0 h-screen w-full bg-white z-20 ${isMobileMenuOpen ? "transition-transform duration-300 ease-in transform translate-x-0" : "transition-transform duration-300 ease-out transform translate-x-full"}`}>
+      <div className={`md:hidden fixed top-0 left-0 h-screen w-full bg-white z-20 ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
         <ul className="h-full flex flex-col justify-center items-center space-y-4 p-4">
           <Link
             to="/"
@@ -112,3 +113,4 @@ function Navbar() {
 }
 
 export default Navbar;
+

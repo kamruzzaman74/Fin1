@@ -2,7 +2,7 @@
 
 /* ... (existing styles) */
 
-.ctao-button {
+.ctaok-button {
   display: inline-block;
   padding: 15px 30px;
   font-size: 1.5rem;
@@ -16,7 +16,7 @@
   animation: fadeInUp 1s ease-out 1.5s;
 }
 
-.ctao-button:hover {
+.ctaok-button:hover {
   background-color: #e67e22;
   transform: scale(1.05); /* Add a slight scale effect on hover */
 }
