@@ -9,14 +9,13 @@ import {
   FiBarChart2,
   FiBookOpen,
 } from 'react-icons/fi';
+import '../components/Service.css';
 
 function Service() {
   const services = [
     {
       title: 'Audit and Assurance Services',
-      description: 'Our experienced auditors give technical contribution to audit engagements and internal projects to the clients’ internal team to conduct an audit as per client’s requirement and we deliver our best towards our client’s expectation. Any type of support which falls within out scope of work is done with the finest expert in this area. We ensure our work has been done properly by reviewing before delivering the assignment to the clients. ',
-
-      
+      description: 'Our experienced auditors give technical contribution to audit engagements and internal projects to the clients’ internal team to conduct an audit as per client’s requirement and we deliver our best towards our client’s expectation. Any type of support which falls within out scope of work is done with the finest expert in this area. We ensure our work has been done properly by reviewing before delivering the assignment to the clients.',
       image: TxImage,
       icon: <FiTrendingUp className="w-12 h-12 text-yellow-600" />,
     },
@@ -40,8 +39,6 @@ function Service() {
     },
   ];
 
-  const [expandedService, setExpandedService] = useState(null);
-
   const demoInfo = [
     "We specialize in tax planning and can help you optimize your tax strategies, reducing your tax liability and maximizing your financial benefits.",
     "Our audit services ensure the accuracy and compliance of your financial records. We leave no stone unturned to maintain financial integrity.",
@@ -49,28 +46,28 @@ function Service() {
     "Our accounting services provide accurate and reliable financial management, whether for your business or personal finances.",
   ];
 
+  const [expandedService, setExpandedService] = useState(null);
+
   return (
-    <section className="bg-white py-16">
+    <section className="service-section py-16">
       <div className="container mx-auto text-center">
-        <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 text-amber-400 animate-fadeIn">
-          Our Financial Services
-        </h2>
+        <h2 className="service-title mb-8 animate-fadeIn">Our Financial Services</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-lg text-left">
-              <div className="text-3xl mb-4 text-center">{service.icon}</div>
+            <div key={index} className="service-card text-left">
+              <div className="text-3xl mb-4 text-center service-icon">{service.icon}</div>
               <img
                 src={service.image}
                 alt={service.title}
                 className="w-full h-40 object-cover rounded-lg mb-4"
               />
               <h3 className="text-2xl font-semibold text-blue-700 mb-2">{service.title}</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 service-description">
                 {expandedService === index ? demoInfo[index] : service.description.slice(0, 100)}
               </p>
               {expandedService !== index && (
                 <button
-                  className="text-blue-500 font-semibold mt-2 hover:text-blue-700 transition duration-300"
+                  className="expand-button mt-2"
                   onClick={() => setExpandedService(index)}
                 >
                   See More
@@ -78,7 +75,7 @@ function Service() {
               )}
               {expandedService === index && (
                 <button
-                  className="text-red-500 font-semibold mt-2 hover:text-red-700 transition duration-300"
+                  className="expand-button mt-2"
                   onClick={() => setExpandedService(null)}
                 >
                   Show Less

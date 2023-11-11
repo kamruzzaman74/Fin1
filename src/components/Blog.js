@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { getBlogPosts } from './BlogData';
-
+import  Movie from '../components/Movie';
 const Blog = () => {
   const [blogPosts, setBlogPosts] = useState([]);
 
@@ -28,6 +28,7 @@ const Blog = () => {
           </div>
         ))}
       </div>
+      <Movie/>
     </div>
   );
 };

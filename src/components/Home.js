@@ -13,7 +13,7 @@ function Home() {
       <Service />
       <CardOperation />
       
-      <section className="bg-white text-gray-800 py-8 sm:py-12">
+      <section className="bg-white text-gray-800 py-8 sm:py-12 animate__animated animate__fadeIn">
         <div className="container mx-auto text-center">
           <h2 className="text-4xl font-extrabold mb-4 text-rose-600">
             Discover Our Expertise
@@ -27,7 +27,7 @@ function Home() {
         </div>
       </section>
 
-      <section className="bg-red-600 text-white py-8">
+      <section className="bg-red-600 text-white py-8 animate__animated animate__fadeInUp">
         <div className="container mx-auto text-center">
           <h2 className="text-4xl font-extrabold mb-4">
             Hire Us Today
@@ -41,8 +41,8 @@ function Home() {
           </Link>
         </div>
       </section>
+      
       <PortfolioPage />
-    
     </div>
   );
 }

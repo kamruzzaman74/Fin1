@@ -1,18 +1,50 @@
+/* LandingPage.css */
+
+/* ... (existing styles) */
+
 .ctao-button {
-    background-color:#99f6e4; /* Coral color */
-    color: black;
-    font-size: 1.5rem;
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    border: 2px solid transparent;
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  background-color: #f39c12;
+  color: #fff;
+  border-radius: 25px;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  animation: fadeInUp 1s ease-out 1.5s;
+}
+
+.ctao-button:hover {
+  background-color: #e67e22;
+  transform: scale(1.05); /* Add a slight scale effect on hover */
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  .ctao-button:hover {
-    background-color: #fef08a; /* Slightly different color on hover */
-    transform: scale(1.05); /* Enlarge the button on hover */
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
+}
+.title,
+.subtitle,
+.paragraph {
+  opacity: 0;
+  animation: fadeInUp 1s ease-out 1s forwards; /* Use 'forwards' to keep the final state after animation */
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

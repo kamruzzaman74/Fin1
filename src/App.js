@@ -12,6 +12,7 @@ import Service from '../src/components/Service';
 import Contact from '../src/components/Contact';
 import GetStarted from '../src/components/GetStarted';
 import Blog from '../src/components/Blog';
+import Hire from '../src/components/Hire';
 function App() {
   return (
     <Router>
@@ -24,6 +25,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/GetStarted" element={<GetStarted />} />
            <Route path="/blog" element={<Blog />} />
+           <Route path="/hire" element={<Hire/>} />
         </Routes>
       </div>
     </Router>

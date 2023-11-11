@@ -95,7 +95,10 @@ const Contact = () => {
           <br />
           Karwan Bazar, Dhaka
           <br />
-          Bangladesh
+          
+          Bangladesh/
+            
+          Phone:01576672498
         </p>
       </div>
     </div>

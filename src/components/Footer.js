@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-white text-gray-800 py-6">
       <div className="container mx-auto flex flex-col items-center">
-        <div className="text-3xl font-extrabold text-cyan-300 mb-4">Stay Connected</div>
+        <div className="text-3xl font-extrabold text-rose-700 mb-4">Stay Connected</div>
         <div className="social-icons">
           <div className="social-link">
             <a href="https://www.facebook.com/finversebd" target="_blank" rel="noopener noreferrer">
@@ -18,7 +18,7 @@ const Footer = () => {
             </a>
           </div>
           <div className="social-link">
-            <a href="https://www.youtube.com/youryoutubepage" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.youtube.com/channel/UC5pe1U2_DzxseUfeY1jdeww" target="_blank" rel="noopener noreferrer">
               <FaYoutube size={28} color="#FF0000" />
             </a>
           </div>

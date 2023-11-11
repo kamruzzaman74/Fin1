@@ -1,18 +1,20 @@
+/* Home.css */
+/* Add your custom styles here */
+
+/* Example styles for the cta-button */
 .cta-button {
-    background-color:white; /* Coral color */
-    color: black;
-    font-size: 1.5rem;
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    border: 2px solid transparent;
-  }
-  
-  .cta-button:hover {
-    background-color: #fe8a8a; /* Slightly different color on hover */
-    transform: scale(1.05); /* Enlarge the button on hover */
-  }
-  
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  background-color: white; /* Choose your desired color */
+  color:black;
+  border-radius: 8px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+  background-color: #5d12e0; /* Choose a slightly darker shade for hover effect */
+}

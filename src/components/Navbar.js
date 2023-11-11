@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
-
+import '../components/Navbar.css'
 function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -10,8 +10,27 @@ function Navbar() {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const navbar = document.querySelector('.navbar'); // Replace 'navbar' with your navbar class or ID
+      if (navbar) {
+        if (window.scrollY > 0) {
+          navbar.classList.add('fixed-navbar');
+        } else {
+          navbar.classList.remove('fixed-navbar');
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="bg-white p-4 md:p-0 w-full md:w-full relative z-10">
+    <nav className={`bg-white p-4 md:p-0 w-full md:w-full relative z-10 navbar ${isMobileMenuOpen ? 'mobile-menu-open' : ''}`}>
       <div className="container mx-auto flex justify-between items-center">
         <Link to="/" className="text-4xl font-extrabold text-teal-300">
           FinVerse
@@ -48,13 +67,7 @@ function Navbar() {
           </button>
         </div>
       </div>
-      <div
-        className={`md:hidden absolute top-19 right-0 h-screen w-full bg-white z-20 ${
-          isMobileMenuOpen
-            ? "transition-transform duration-300 ease-in transform translate-x-0"
-            : "transition-transform duration-300 ease-out transform translate-x-full"
-        }`}
-      >
+      <div className={`md:hidden absolute top-19 right-0 h-screen w-full bg-white z-20 ${isMobileMenuOpen ? "transition-transform duration-300 ease-in transform translate-x-0" : "transition-transform duration-300 ease-out transform translate-x-full"}`}>
         <ul className="h-full flex flex-col justify-center items-center space-y-4 p-4">
           <Link
             to="/"
@@ -65,31 +78,31 @@ function Navbar() {
           <Link
             to="/blog"
             onClick={toggleMobileMenu}
-            className="text-gray-800 hover-text-red-600 transition duration-300 ease-in-out transform rounded-full px-4 py-2 bg-yellow-400">
+            className="text-gray-800 hover:text-red-600 transition duration-300 ease-in-out transform rounded-full px-4 py-2 bg-yellow-400">
             Blog
           </Link>
           <Link
             to="/about"
             onClick={toggleMobileMenu}
-            className="text-gray-800 hover-text-red-600 transition duration-300 ease-in-out transform rounded-full px-4 py-2 bg-yellow-400">
+            className="text-gray-800 hover:text-red-600 transition duration-300 ease-in-out transform rounded-full px-4 py-2 bg-yellow-400">
             About
           </Link>
           <Link
             to="/service"
             onClick={toggleMobileMenu}
-            className="text-gray-800 hover-text-red-600 transition duration-300 ease-in-out transform rounded-full px-4 py-2 bg-yellow-400">
+            className="text-gray-800 hover:text-red-600 transition duration-300 ease-in-out transform rounded-full px-4 py-2 bg-yellow-400">
             Service
           </Link>
           <Link
             to="/contact"
             onClick={toggleMobileMenu}
-            className="text-gray-800 hover-text-red-600 transition duration-300 ease-in-out transform rounded-full px-4 py-2 bg-yellow-400">
+            className="text-gray-800 hover:text-red-600 transition duration-300 ease-in-out transform rounded-full px-4 py-2 bg-yellow-400">
             Contact
           </Link>
           <Link
             to="/GetStarted"
             onClick={toggleMobileMenu}
-            className="text-white hover-text-red-600 transition duration-300 ease-in-out transform rounded-full px-4 py-2 bg-rose-600">
+            className="text-white hover:text-red-600 transition duration-300 ease-in-out transform rounded-full px-4 py-2 bg-rose-600">
             Get Started
           </Link>
         </ul>
