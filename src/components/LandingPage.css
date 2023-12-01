@@ -1,10 +1,8 @@
 /* LandingPage.css */
 
-/* ... (existing styles) */
-
 .ctaok-button {
   display: inline-block;
-  padding: 20px 35px;
+  padding: 15px 25px;
   font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
@@ -14,37 +12,11 @@
   border-radius: 25px;
   transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
   animation: fadeInUp 1s ease-out 1.5s;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 .ctaok-button:hover {
   background-color: #e67e22;
-  transform: scale(1.05); /* Add a slight scale effect on hover */
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.title,
-.subtitle,
-.paragraph {
-  opacity: 0;
-  animation: fadeInUp 1s ease-out 1s forwards; /* Use 'forwards' to keep the final state after animation */
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(50, 50, 93, 0.16), 0 1px 3px rgba(0, 0, 0, 0.08);
 }

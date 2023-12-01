@@ -1,0 +1,59 @@
+body, h1, h2, h3, p, div {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Make the body a flex container to center content */
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Style for each animated square */
+  .performance-square,
+  .client-quantity-square,
+  .project-quantity-square {
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+    position: absolute;
+  }
+  
+  /* Common styling for square content */
+  .square-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+  }
+  
+  /* Performance Square styling */
+  .performance-square {
+    background-color: #ff6f61; /* Customize the color */
+  }
+  
+  /* Client Quantity Square styling */
+  .client-quantity-square {
+    background-color: #66c0f4; /* Customize the color */
+  }
+  
+  /* Project Quantity Square styling */
+  .project-quantity-square {
+    background-color: #86e3ce; /* Customize the color */
+  }
+  
+  /* Animation for filling the square */
+  @keyframes fillSquare {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }

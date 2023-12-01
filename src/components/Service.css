@@ -1,61 +1,59 @@
 /* Service.css */
 
-@keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+.service-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 20px;
+}
+
+.service-heading {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.service-card {
+  transition: transform 0.3s ease-in-out;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+}
+
+.service-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.service-text {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.service-button {
+  margin-top: 1rem;
+  align-self: flex-start;
+}
+
+.service-button-1 {
+  background-color: #5a67d8; /* Indigo */
+}
+
+.service-button-2 {
+  background-color: #5a67d8; /* Indigo */
+}
+
+.service-button-3 {
+  background-color: #5a67d8; /* Indigo */
+}
+
+@media (min-width: 768px) {
+  .service-container {
+    grid-template-columns: repeat(2, 1fr);
   }
-  
-  .service-section {
-    background-color: #f9f9f9;
-  }
-  
-  .service-title {
-    font-size: 2.5rem;
-    color: #ffcc00;
-    margin-bottom: 2rem;
-    animation: fadeInUp 1s ease-out;
-  }
-  
-  .service-card {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .service-card:hover {
-    transform: scale(1.05);
-  }
-  
-  .service-icon {
-    font-size: 3rem;
-    color: #3498db;
-  }
-  
-  .service-description {
-    color: #666666;
-  }
-  
-  .expand-button {
-    color: #3498db;
-    font-weight: bold;
-    cursor: pointer;
-    transition: color 0.3s ease-in-out;
-  }
-  
-  .expand-button:hover {
-    color: #1e87d5;
-  }
-  .service-title {
-    font-size: 3rem; /* Adjust the font size as needed */
-    font-weight: bold;
-    color: #ff9900; /* Set your desired color */
-    margin-bottom: 2rem; /* Add space at the bottom for better visual appearance */
-  }
+}

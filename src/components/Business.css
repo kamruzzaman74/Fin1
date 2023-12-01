@@ -1,0 +1,106 @@
+/* Business.css */
+
+.business-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .main-heading {
+    color: #3498db;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .business-image {
+    max-width: 40%; /* Set a smaller size for the image */
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 99, 71, 0.7), 0 0 30px rgba(255, 99, 71, 0.5); /* Colorful shadow */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .business-image:hover {
+    transform: scale(1.1);
+  }
+  
+  .services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .service {
+    width: 30%;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .service:hover {
+    transform: scale(1.05);
+  }
+  
+  .icon {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #3498db;
+  }
+  
+  .service-heading {
+    color: #e74c3c;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .service-description {
+    color: #555;
+  }
+  /* Business.css */
+
+/* ... Existing styles ... */
+
+/* Business.css */
+
+/* ... Existing styles ... */
+
+@media only screen and (max-width: 768px) {
+    .services-container {
+      flex-direction: column; /* Keep cards stacked on top of each other for phone view */
+    }
+  
+    .service {
+      width: 80%;
+      margin: 0 auto 20px;
+    }
+  
+    .icon {
+      font-size: 1.5em;
+    }
+  
+    .service-heading {
+      font-size: 1.2em;
+    }
+  
+    .business-image {
+      max-width: 80%;
+      margin: 0 auto;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(255, 99, 71, 0.7), 0 0 30px rgba(255, 99, 71, 0.5); /* Colorful shadow */
+      transition: transform 0.3s ease-in-out;
+    }
+  
+    .business-image:hover {
+      transform: scale(1.1);
+    }
+  }
+  

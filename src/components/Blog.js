@@ -1,38 +1,58 @@
-// src/components/Home.js
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { getBlogPosts } from './BlogData';
-import  Movie from '../components/Movie';
-const Blog = () => {
-  const [blogPosts, setBlogPosts] = useState([]);
+// FinancialBlog.js
+import React from 'react';
+import announcementImage from '../photo/nnn.jpg';
+import announcementImage1 from '../photo/kl.png';
 
-  useEffect(() => {
-    getBlogPosts().then((data) => setBlogPosts(data));
-  }, []);
+const Blog = () => {
+  // Main announcement
+  const announcement = {
+    title: 'Important Announcement: New Investment Opportunity!',
+    description: 'We are excited to introduce a new investment opportunity that aligns with our commitment to financial growth and stability. Learn more about this exciting venture and how it can benefit you.',
+    imageUrl: announcementImage, // Use the imported variable directly
+  };
+
+  // Dummy data for blog posts
+  const blogPosts = [
+    {
+      title: 'Navigating Market Trends: A Guide for Investors',
+      description: 'In this post, we explore the latest market trends and provide valuable insights for investors looking to make informed decisions. Stay ahead of the curve and optimize your investment strategy.',
+      imageUrl: announcementImage1, // Use the same image for simplicity, replace with the actual image URL
+    },
+    // Add more blog posts as needed
+  ];
 
   return (
-    <div className="container mx-auto p-8">
-      <h1 className="text-4xl font-extrabold text-cyan-200 my-6">
-        Welcome to Our <span className="text-fancyblue"> Blog</span>
-      </h1>
-      <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        {blogPosts.map((post) => (
-          <div
-            key={post.id}
-            className="bg-white rounded-lg p-6 shadow-md transition-transform transform hover:scale-105 hover:shadow-fancy"
-          >
-            <Link to={`/blog/${post.id}`}>
-              <h2 className="text-2xl font-semibold text-fancyblue">{post.title}</h2>
-              <p className="mt-4 text-fancygreen">{post.content}</p>
-            </Link>
+    <div className="max-w-2xl mx-auto mt-8">
+      {/* Main Announcement */}
+      <div className="mb-8 p-4 border rounded-lg bg-blue-100">
+        <div className="flex items-center justify-center">
+          <img src={announcement.imageUrl} alt={announcement.title} className="w-1/2 h-48 object-cover rounded-lg mr-4" />
+          <div>
+            <h1 className="text-3xl font-bold mb-2">{announcement.title}</h1>
+            <p className="text-lg mb-4">{announcement.description}</p>
+           
+          </div>
+        </div>
+      </div>
+
+      {/* Blog Posts */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {blogPosts.map((post, index) => (
+          <div key={index} className="p-4 border rounded-lg">
+            <img src={post.imageUrl} alt={post.title} className="w-full h-48 object-cover mb-4 rounded-lg" />
+            <h2 className="text-2xl font-bold mb-2">{post.title}</h2>
+            <p className="text-lg mb-4">{post.description}</p>
+            {/* You can add more content or styling as needed */}
           </div>
         ))}
       </div>
-      <Movie/>
     </div>
   );
 };
 
 export default Blog;
+
+       
+
 
 

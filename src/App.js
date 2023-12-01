@@ -13,6 +13,10 @@ import Contact from '../src/components/Contact';
 import GetStarted from '../src/components/GetStarted';
 import Blog from '../src/components/Blog';
 import Hire from '../src/components/Hire';
+import Adit from '../src/components/Adit';
+import Fin from '../src/components/Fin';
+import Tax from '../src/components/Tax';
+
 function App() {
   return (
     <Router>
@@ -26,6 +30,10 @@ function App() {
           <Route path="/GetStarted" element={<GetStarted />} />
            <Route path="/blog" element={<Blog />} />
            <Route path="/hire" element={<Hire/>} />
+           <Route path="/adit" element={<Adit/>} />
+           <Route path="/fin" element={<Fin/>} />
+           <Route path="/tax" element={<Tax/>} />
+           
         </Routes>
       </div>
     </Router>

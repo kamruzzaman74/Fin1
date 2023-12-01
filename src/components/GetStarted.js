@@ -19,6 +19,11 @@ function GetStarted() {
           <li>Accounting and Bookkeeping Services</li>
           <li>Legal Compliance Support</li>
           <li>Customized Financial Solutions</li>
+
+          <li>	Accounting and Bookkeeping Services</li>
+          <li>Tax Consulting and Planning</li>
+          <li>	Legal Compliance Support </li>
+
         </ul>
         <p className="text-lg mb-4">
           We understand that every business is unique. Our expert team is ready to assist you in choosing the right package that best suits your needs.
