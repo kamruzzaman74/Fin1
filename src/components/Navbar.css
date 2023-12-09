@@ -65,3 +65,29 @@
   transform: rotate(0); /* Reset the rotation on mobile menu close */
 }
 
+/* Navbar.css */
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  z-index: 1000;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Add the same styles as before for the fixed navbar, if needed */
+.fixed-navbar {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ... (rest of your CSS) */
+/* Navbar.css */
+.navbar.fixed-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  /* Add any other styles you need for the fixed navbar */
+}

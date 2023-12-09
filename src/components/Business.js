@@ -2,7 +2,7 @@
 import React from 'react';
 import { FiSettings, FiUsers, FiLayers } from 'react-icons/fi';
 import '../components/Business.css';
-import pic9 from '../photo/nnn.jpg';
+import pic9 from '../photo/nc.webp';
 function Business() {
     return (
       <div className="business-container">

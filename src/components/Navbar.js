@@ -1,3 +1,5 @@
+
+// Navbar.js
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -11,17 +13,22 @@ function Navbar() {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const navbar = document.querySelector('.navbar');
-      if (navbar) {
+  const handleScroll = () => {
+    const navbar = document.querySelector('.navbar');
+    if (navbar) {
+      const isDesktop = window.innerWidth >= 768; // Adjust the breakpoint as needed
+      if (isDesktop) {
         if (window.scrollY > 0) {
           navbar.classList.add('fixed-navbar');
         } else {
           navbar.classList.remove('fixed-navbar');
         }
       }
-    };
+    }
+  };
+
+  useEffect(() => {
+    handleScroll(); // Initial check on mount
 
     window.addEventListener('scroll', handleScroll);
 
@@ -34,7 +41,7 @@ function Navbar() {
     <nav className={`bg-white p-4 md:p-0 w-full md:w-full relative z-10 navbar ${isMobileMenuOpen ? 'mobile-menu-open' : ''}`}>
       <div className="container mx-auto flex justify-between items-center">
         <Link to="/" className="text-4xl font-extrabold text-teal-300">
-          FinVerse
+          FinVerseBD
         </Link>
         <div className="hidden md:flex space-x-4">
           <Link to="/" className="text-gray-800 font-semibold hover:text-red-600 transition duration-300">

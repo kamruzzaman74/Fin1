@@ -1,6 +1,6 @@
 import React from 'react';
 import '../components/Video.css'; // Import your CSS file
-import pic from '../photo/kl.png';
+import pic from '../photo/nc.webp';
 
 const Movie = () => {
   return (

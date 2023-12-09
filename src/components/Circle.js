@@ -13,10 +13,10 @@ const CircularProgressBar = () => {
   useEffect(() => {
     // Simulating progress update
     const interval = setInterval(() => {
-      setProgress1((prevProgress) => (prevProgress + 1) % 101);
-      setProgress2((prevProgress) => (prevProgress + 2) % 101);
-      setProgress3((prevProgress) => (prevProgress + 3) % 101);
-      setProgress4((prevProgress) => (prevProgress + 4) % 101);
+      setProgress1((prevProgress) => (prevProgress + 1) % 40);
+      setProgress2((prevProgress) => (prevProgress + 2) % 30);
+      setProgress3((prevProgress) => (prevProgress + 3) % 35);
+      setProgress4((prevProgress) => (prevProgress + 4) % 55);
     }, 1000);
 
     return () => clearInterval(interval);

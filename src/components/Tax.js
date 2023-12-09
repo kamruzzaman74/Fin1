@@ -24,7 +24,7 @@ const styles = {
   container: {
     maxWidth: '800px',
     margin: '0 auto',
-    padding: '40px',
+    padding: '20px', // Reduced padding for better responsiveness
     textAlign: 'center',
   },
   content: {
@@ -44,10 +44,13 @@ const styles = {
     fontSize: '18px',
     lineHeight: '1.6',
     color: '#555',
+    textAlign: 'left', // Align paragraph to the left
+    marginBottom: '15px', // Added margin for better separation
   },
   list: {
-    listStyleType: 'square',
-    marginLeft: '20px',
+    listStyleType: 'none', // Removed list-style square for a cleaner look
+    padding: 0, // Removed default padding
+    textAlign: 'left', // Align list items to the left
   },
 };
 

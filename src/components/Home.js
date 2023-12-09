@@ -23,18 +23,19 @@ function Home() {
         </div>
       </section>
 
-      <section className="bg-red-600 text-white py-8 animate__animated animate__fadeInUp">
-        <div className="container mx-auto text-center">
-          <h2 className="text-4xl font-extrabold mb-4">Hire Us Today</h2>
-          <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-6">
-            Let our experts help you with your financial needs.
-          </p>
+      <section className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white py-8 animate__animated animate__fadeInUp shadow-md rounded-lg">
+  <div className="container mx-auto text-center">
+    <h2 className="text-4xl font-extrabold mb-4">Hire Us Today</h2>
+    <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-6">
+      Let our experts help you with your financial needs.
+    </p>
 
-          <Link to="/contact" className="cta-button-fancy">
-  <span>Contact us</span>
-</Link>
-        </div>
-      </section>
+    <Link to="/contact" className="cta-button-fancy">
+      <span>Contact us</span>
+    </Link>
+  </div>
+</section>
+
     </div>
   );
 }

@@ -1,6 +1,6 @@
 // LandingPage.js
 import React from 'react';
-import pic from '../photo/hhhwebp.webp';
+import pic from '../photo/mm.jpg';
 import '../components/LandingPage.css'; // Import your CSS file
 import { Link } from 'react-router-dom';
 
@@ -25,7 +25,7 @@ const LandingPage = () => {
     >
       <div className="overlay">
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-4 text-cyan-300 title">
-          Welcome to FinVerse
+          Welcome to FinVerseBD
         </h1>
         <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold mb-4 text-yellow-300 subtitle">
           Your Trusted Financial Partner
